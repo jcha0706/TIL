@@ -1,0 +1,41 @@
+java2
+class, method, instance
+
+overloading
+-한 클래스 내에서 동일한 이름의 메소드를 여러개 같은 것
+-매개변수의 갯수나 타입이 달라야함
+    int add(int x, int y, int z){
+        return x + y + z;
+    }
+    int add(int a, int b){
+        return a + b;
+    }
+    long add(int a, int b, long c){
+        return a + b + c;
+    }
+
+overriding
+-부모의 클래스로부터 상속받은 메소드를 받아 자식클래스에서 변경후 덮어버림
+class Animal2{
+    String name;
+    String color;
+
+    public Animal2(String name){
+        this.name = name;
+    }
+
+    public void cry(){
+        System.out.println(name + " is crying");
+    }
+}
+
+class Dog2 extends Animal2{
+    public Dog2(String name){
+        super(name);
+    }
+
+    @Override
+    public void cry(){
+        System.out.println(name + " is barking");
+    }
+}

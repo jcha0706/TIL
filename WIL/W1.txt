@@ -1,0 +1,4 @@
+Week1
+-teamworking: coworking, merging
+-webprogramming: git, github, JWT, FileZilla, gitbash, slack, sourcetree
+-java: variable types, class, instance, method, constructor, inheritance

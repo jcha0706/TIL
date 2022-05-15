@@ -1,0 +1,56 @@
+public class Main{
+public static void main(String[] args}{
+}
+
+
+<Array>
+int[] intEmptyArray = new int [5];
+System.out.println(Arrays.toString(intEmptyArray));
+System.out.println(intEmptyArray[intEmptyArray.length-1]);
+
+String[] season = {"spring", "summer", "fall", "winter"};
+
+
+<switch>
+char score = 'S':
+switch(score){
+case 'A':
+	System.out.println("A!");
+	break;
+case 'B':
+	System.out.println("B!");
+	break;
+case 'C':
+	System.out.println("C!");
+	break;
+default:
+	System.out.println("Lower than C");
+}
+
+<삼항>
+String result =  조건문 ? 조건문이  true 일때 : 조건문이 false 일때
+
+<반복문>
+for each
+
+String[] days = {"mon", "tues", "wednes"};
+for(String day: days){
+System.out.println(day);
+}
+
+
+while, continue
+
+int i = 0;
+int sum = 0;
+=(4 + 1)을 제외한 모든 값 더한값
+while(i < 10){
+if(i == 4){
+i++;
+continue;
+}
+sum += (i+1);
+i++;
+}
+System.out.println(sum);
+
