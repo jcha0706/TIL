@@ -1,0 +1,82 @@
+JPA(Java Persistence API)란?
+-SQL을 쓰지 않고 데이터를 생성, 조회, 수정, 삭제할 수 있도록 해주는 번역기
+
+
+Domain
+-(MySQL의) Table과 같음 (데이터 시트)
+
+Repository
+-(MySQL의) SQL과 같은 역활
+
+Course.Java
+
+@NoArgsConstructor // 기본생성자를 대신 생성해줍니다. (No Arguments Contructor)
+@Entity // 테이블임을 나타냅니다. <===일반 클래스가 아니라 데이터베이스 테이블이다!
+public class Course {
+
+    @Id // ID 값, Primary Key로 사용하겠다는 뜻입니다.
+    @GeneratedValue(strategy = GenerationType.AUTO) // 자동 증가 명령입니다.
+    private Long id;
+
+    @Column(nullable = false) // 컬럼 값이고 반드시 값이 존재해야 함을 나타냅니다.
+    private String title;
+
+    @Column(nullable = false)
+    private String tutor;
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public String getTutor() {
+        return this.tutor;
+    }
+
+    public Course(String title, String tutor) {
+        this.title = title;
+        this.tutor = tutor;
+    }
+}
+
+
+update
+week02Application
+
+
+
+@EnableJpaAuditing
+@SpringBootApplication
+public class Week02Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Week02Application.class, args);
+    }
+@Bean
+public CommandLineRunner demo(CourseRepository courseRepository, CourseService courseService) {
+    return (args) -> {
+        courseRepository.save(new Course("프론트엔드의 꽃, 리액트", "임민영"));
+
+        System.out.println("데이터 인쇄");
+        List<Course> courseList = courseRepository.findAll();
+        for (int i=0; i<courseList.size(); i++) {
+            Course course = courseList.get(i);
+            System.out.println(course.getId());
+            System.out.println(course.getTitle());
+            System.out.println(course.getTutor());
+        }
+
+        Course new_course = new Course("웹개발의 봄, Spring", "임민영");
+        courseService.update(1L, new_course);
+        courseList = courseRepository.findAll();
+        for (int i=0; i<courseList.size(); i++) {
+            Course course = courseList.get(i);
+            System.out.println(course.getId());
+            System.out.println(course.getTitle());
+            System.out.println(course.getTutor());
+        }
+    };
+}
+}
+
+
+courseRepository.deleteAll();

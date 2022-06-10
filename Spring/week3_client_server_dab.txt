@@ -1,0 +1,16 @@
+RestController: JSON으로 응답하는 자동응답기(Controlller)
+Serivce: Update 할때 필요
+Repository: 생성, 삭제, 조회 할때 필요
+RequestDto: 변경을 원하거나, 데이터를 날를때
+
+
+Client <- API - Controller - Service - Repository - JPA - SQL -> DB
+
+
+domain
+-RequestDTO
+-Repository
+-Main
+
+Service
+-Service

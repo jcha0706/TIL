@@ -1,0 +1,17 @@
+API_POST,PUT,DELETE
+
+GET
+ex) @GetMapping
+-불러오기
+
+POST
+ex) @PostMapping
+-생성요청
+
+PUT
+ex) @PutMapping
+-수정
+
+
+
+W2 숙제 해설영상 참조

@@ -1,0 +1,21 @@
+H2 Command
+
+->Intellij => resources.application.property
+spring.h2.console.enabled=true
+spring.datasource.url=jdbc:h2:mem:testdb;MODE=MYSQL
+
+->Web Browser -> localhost:8080/h2-console
+<데이터에 테이블 생성>
+CREATE TABLE IF NOT EXISTS courses (  <==="courses" = 테이블 이름
+    id bigint(5) NOT NULL AUTO_INCREMENT,  <=== bigint = long   <====auto_increment = 데이터가 추가될때 알아서 배열 증가
+    title varchar(255) NOT NULL,		<=== varchar = String
+    tutor varchar(255) NOT NULL,
+    PRIMARY KEY (id)         <=== 데이터 하나하나를 구분
+);
+
+<데이터 생성>
+INSERT INTO courses (title, tutor) VALUES
+    ('웹개발의 봄, Spring', '남병관'), ('웹개발 종합반', '이범규');
+
+<조회하기>
+SELECT * FROM courses;

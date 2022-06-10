@@ -1,0 +1,20 @@
+collection-list,set,map
+-자료구조를 표현하는 인터페이스
+
+-컬렉션이란?
+다수의 데이터를 다루기 위한 자료구조를 표현하고 사용하는 클래스의 집합
+
+List: 순서 O, 중복 O
+ex) ArrayList, LinkedList, Stack 등
+
+Set: 순서 X, 중복 X
+ex) HashSet, TreeSet
+
+Map: 순서 X, 중복 value O. 키와 값의 쌍으로 이루어진 데이터 집합
+ex) HashMap, TreeMap
+
+Stack: LIFO(Last In First Out)
+ex)Stack, ArrayDeque
+
+Queue: FIFO(First In First Out)
+ex)Queue, ArrayDeque

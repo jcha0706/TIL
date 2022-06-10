@@ -1,0 +1,35 @@
+ArrayDeque
+-Stack, Queue의 기능을 모두 포함
+--->poll(), push(), pop().... 사용
+-한쪽에서만 값이 삽입되고, 반환되는게 아니라, 양끝쪽에서 삽입 반환 가능
+
+
+       ArrayDeque<Integer> arrayDeque = new ArrayDeque<>();
+        arrayDeque.addFirst(1); ---->첫번째 자리로 들어감
+        arrayDeque.addFirst(2);
+        arrayDeque.addFirst(3);
+        arrayDeque.addFirst(4);
+        System.out.println(arrayDeque);
+	----->결과 값: 4 3 2 1
+
+        arrayDeque.addLast(0);
+	----->결과 값: 4 3 2 1 0
+        System.out.println(arrayDeque);
+
+        arrayDeque.offerFirst(10);
+        System.out.println(arrayDeque);
+        arrayDeque.offerLast(-1);
+        System.out.println(arrayDeque);
+
+        arrayDeque.push(22);
+        System.out.println(arrayDeque);
+
+        System.out.println(arrayDeque.pop());
+        System.out.println(arrayDeque);
+
+        System.out.println(arrayDeque.pop());
+        System.out.println(arrayDeque.peek());
+        System.out.println(arrayDeque);
+        System.out.println(arrayDeque.size());
+        arrayDeque.clear();
+        System.out.println(arrayDeque.isEmpty());

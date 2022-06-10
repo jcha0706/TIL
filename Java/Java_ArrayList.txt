@@ -1,0 +1,24 @@
+List<Integer> integerList = new ArrayList<>();
+intergerList.add(1);
+intergerList.add(15)
+intergerList.add(7);
+
+System.out.println(integerList);
+->결과 [1, 15, 7]
+
+Collections.sort(integerList);
+->list ascending 순서로 배열 정리
+
+System.out.println(integerList);
+->결과 [1, 7, 15]
+
+integerList.size()
+-> 배열 크기
+
+integerList.remove(2);
+->index 2에 있는 데이터 삭제
+
+for(int current: integerList){
+System.out.println(current);
+}
+->intergerList에 있는 데이터 하나씩 출력

@@ -1,0 +1,22 @@
+Week5_JPA
+
+ORM
+Java에 해당되는 ORM (DB와 Java 사이의 변역기): JPA
+--> 객체 - ORM - DB
+Hibernate: JPA가 설명서라면, 하이버네이트는 실제 구연체 (de facto: "사실상")
+
+PK (Primary Key)
+->테이플에서 각 row마다 가져야 하는 유일무이한 값 (Null 값 허용안됨)
+->보통 테이플 ID(인조키)를 PK로 설정
+ex)
+Entity에서 자연키로 ID 생성하는 방법
+	@Id
+	@Column(name = "id", nullable = false, unique = true)
+	private String username;
+(자바에서는 username으로 사용되지만, 데이터 table 에서는 ID,PK로 사용된다)
+
+
+Entity에서 인조키로 ID 생성
+	@GeneratedValue(stategy = GenerationType.AUTO)
+	@Id
+	private Long id;

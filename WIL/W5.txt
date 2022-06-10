@@ -1,0 +1,20 @@
+Cookie & Session
+쿠키: 클라이언트에서 일정시간 동안 클라이언트 상태를 유지하기 위해 사용
+
+세션: 서버에서 일정시간 동안 클라이언트 상태를 유지하기 위해 사용
+->세션에서 클라이언트로 쿠키에 아이디를 줌 (세션 쿠키)
+->클라이언트에 쿠키가 있어야만 사용가능
+ex)로그인 정보 (유지)
+
+
+ 
+
+2-9
+
+MODE=MYSQL
+
+
+        Set<FoodRequestDto> foodSet = new HashSet<>();
+        if(foodSet.size()!= foodRequestDto.size()){
+            System.out.println("중복된 요소가 있습니다!");
+        }

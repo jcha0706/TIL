@@ -1,0 +1,26 @@
+Spring 1주차
+
+서버 응답 받는 방법 두가지: 데이터로 응답 Or html, css, javascript로
+
+"Rest"Controller
+-서버에서 데이터(JSON)로 응답 받으려면 사용해야 한다
+-"Rest": 서버의 응답이 JSON형식임을 나타냄
+
+Controller (자동응답기)
+-클라이언트의 요청(Request)을 전달받는 코드를 부르는 명칭
+->RestController는 JSON만 돌려 줌
+
+
+ex) ---->클래스 위에 @RestController를 붙여준다
+@RestController
+public class CourseController{
+ @GetMapping("/courses")   <-----localhost:8080/course
+ public Course getCourses(){
+ 	Course course = new Course();
+	course.setTitle("웹개발의 봄 스프링");
+	course.setDays(35);
+	course.setTutor("");
+	return course;
+ }
+}
+

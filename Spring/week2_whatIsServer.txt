@@ -1,0 +1,33 @@
+클라이언트 - 서버 - DB(H2, MySQL)
+
+서버 (스프링)
+3가지로 나누어져 있음: Controller, Service, Repository, JPA
+1. Controller: 가장 바깥 부분, 요청/응답을 처리 (자동응답기)
+2. Service: 중간 부분, 실제 중요한 작동이 많이 일어나는 부분 (업데이트)
+3. Repo: 가장 안쪽 부분, DB와 맞닿아 있음. (Repository, Entity) (직접 쿼리에 날림)
+
+
+JPA (Java Persistence API)
+→(API: Application Programming Interface): 서버와 클라이언트가 소통(상호작용)하는 창구
+-JPA는, SQL을 사용하지 않고 데이터를 생성, 조회, 수정, 삭제할 수 있도록 해주는 “변역기” (Java를 이용해서)
+-JPA를 사용하지 않는다면, Java를 사용하다, 중간중간 SQL을 짜야되는 불편함.
+즉슨, Java가 아닌 다른 문법을 다시 알고 사용해야함.
+-JPA 사용시, Java 문법으로 명령어.
+-Java 명령어를 SQL로 변역함
+
+RDBMS (RDB): 관계형 데이터베이스 (정보 저장소), Relational DataBase Manangment System
+ex) 쇼핑몰이라면 주문 정보, 고객 정보 등을 컴퓨터에 저장할때 도와줌
+-컴퓨터에 정보를 저장하고 관리하는 기술 (고도화된 엑셀같음)
+-SQL(Structured Query Language): 데이터를 읽고, 저장하고, 변경하고, 삭제하는 구체적인 문법
+-MySQL, OracleDatabase, H2
+-H2는 RDBMS의 한 종류로, 서버가 켜저있는 동안에만 작동하는 RDB. 서버가 작동을 멈추면
+데이터가 모두 삭제됨.
+
+->Intellij => resources.application.property
+spring.h2.console.enabled=true
+spring.datasource.url=jdbc:h2:mem:testdb;MODE=MYSQL
+
+
+Repository
+-데이터를 접근하는 하나의 도구
+-JPA를 작동시키는 매개체

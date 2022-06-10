@@ -1,0 +1,38 @@
+HashSet
+index 없음
+
+Set<Integer> integerSet = new HashSet<>();
+integerSet.add(1);
+integerSet.add(1);
+integerSet.add(3);
+integerSet.add(2);
+integerSet.add(9);
+System.out.println(integerSet);
+->결과: [1, 9, 2, 3]
+
+Set<String> stringSet = new HashSet<>();
+stringSet.add("LA");
+stringSet.add("New York");
+stringSet.add("Las Vegas");
+stringSet.add("San Francisco");
+stringSet.add("Seoul");
+
+stringSet.remove("Seoul");
+
+--->리스트를 만들어서
+List<String> target = new ArrayList<>();
+target.add("New York");
+target.add("Las Vegas");
+stringSet.removeAll(target); --->stringSet 안에 target 배열에 들어있는 동일한 데이터들 삭제
+System.out.println(stringSet);
+
+
+System.out.println("Is LA included? " + stringSet.contains("LA"));
+System.out.println("Is Seoul included? " + stringSet.contains("Seoul"));
+-stringSet.contains();
+-->배열에 () 안에 기입한 데이터가 있는지 확인하는 메소드.
+있으면  true, 없으면 false 값으로 나옴
+
+System.out.println(stringSet.size());
+stringSet.clear();
+-->배열 안의 데이터를 모두 지우는 메소드

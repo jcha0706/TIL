@@ -1,0 +1,19 @@
+Controller의 장점
+-HTTP request, response 처리를 위해 매번 작성해 줘야하는 중복코드를 생략 가능
+
+
+Spring MVC (Model - View - Controller)
+1) static(정적) 웹페이지
+-Controller
+-->1. Client의 요청을 Model로 받아 처리 (i.e., id, pw, name)
+-->2. Client에게 View (정적 웹 페이지, HTML)를 내려줌
+
+2) dynamic(동적) 웹페이지
+-Template engine 에게 View, Model 전달
+-->View에 Model을 적용
+ex) Thymeleaf, Groovy
+
+
+Requests vs Responses
+Request API 요청
+--> Get 

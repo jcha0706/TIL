@@ -1,0 +1,9 @@
+class 선언후 인스턴스 생성
+class  class name = new class();
+
+
+접근제어 (incapsulation)
+private: class private
+(default): package private
+protected 
+public

@@ -1,0 +1,20 @@
+ajax
+servlet
+DI (Dependency Injection): 의존성 주입
+-용도에 맞게 필요한 객체를 그냥 가져다 사용
+
+IoC (Inversion of Control): 제어의 역전
+-용도에 맞게 필요한 객체를 그냥 가져다 사용
+-사용할 객체가 어떻게 만들어 졌는지 알 필요 없음
+
+
+Bean(빈): 스프링에 의해서 생성되고 스프링이 관리하는 객체
+-> @Component로 Bean 선언
+Spring IoC 컨테이너: '빈'을 모아둔 통
+
+;MODE=MYSQL
+
+server.port=8081
+
+@Getmapping("/login")
+public

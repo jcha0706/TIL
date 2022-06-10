@@ -1,0 +1,27 @@
+date/time
+
+LocalDate date = LocalDate.now();
+LocalTime time = LocalTime.now();
+LocalDateTime dateTime = LocalDateTime.now();
+
+DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT);
+String shortFormat = formatter.format(LocalTime.now());
+System.out.println(shortFormat);
+
+
+DateTimeFormatter myFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+String myDate = myFormatter.format(LocalDate.now());
+System.out.println(myDate);
+
+
+DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd h:mm");
+String now = dateTimeFormatter.format(LocalDateTime.now());
+System.out.println("Current time & date: " + now);
+
+
+
+기간 구하기
+LocalDate today = LocalDate.now();
+LocalDate birthday = LocalDate.of(2022,7,6);
+Period period = Period.between(today, birthday);
+System.out.println(period.getMonths() + " months " + period.getDays() + " days away");

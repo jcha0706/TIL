@@ -1,0 +1,19 @@
+객체 생성
+Human grandparent = new Grandparent();
+과
+Grandparents grandparents = new Grandparent();
+같음
+
+
+Human[] humen - {grandparent, parent, child};
+for(Human human: humen){
+if(human instanceof Walkable){
+((Walkable) human).walk();
+}
+}
+
+instanceof => 인스턴스가(객체가) interface의 상속인지 확인하는 문법
+객체 instanceof 인터페이스
+
+(interface) 객체 = interface의 메소드를 사용하기 위해 그 인터페이스로
+캐스팅

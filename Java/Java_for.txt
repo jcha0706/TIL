@@ -1,0 +1,6 @@
+for(int i = n; i < n; i++){
+}
+
+for(n : array){
+}
+

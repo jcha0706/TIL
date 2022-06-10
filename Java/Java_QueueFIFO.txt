@@ -1,0 +1,13 @@
+Queue FIFO
+먼저 들어간 데이터가, 먼저 poll()로 나옴
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(1);
+        queue.add(5);
+        queue.add(3);
+---->구현
+	출력(poll())<----- 1 5 3 ----->저장(add())
+        System.out.println(queue);
+        System.out.println(queue.poll()); ---> 데이터 꺼내기
+        System.out.println(queue);
+        System.out.println(queue.peek()); ---> 데이터 확인
+        System.out.println(queue);

@@ -1,0 +1,23 @@
+RDBMS
+SQL
+LOMBOK
+localhost:8080
+내 컴퓨터:8080방
+
+URL: Uniform Resource Locator
+
+
+intellij ultimate
+vicferrari98@gmail.com
+ZhiZhiXun173856
+
+"겟방식"
+클라이언트가 주소창(브라우저)에 입력하여 서버에 요청하는 것
+
+
+스프링 프로젝트 다운받아야할 목록
+-Spring Web
+-MySQL Driver
+-H2
+-JPA
+-Lombok
